@@ -2689,7 +2689,7 @@ function SubscriptionGeneratorPage() {
                     </CardDescription>
                   </div>
                   <ButtonGroup mode='responsive' hideIconOnMobile>
-                    {!isV3Mode && (
+                    {(!isV3Mode || ruleMode === 'custom') && (
                       <>
                         <Button variant='outline' size='sm' onClick={handleAutoGroupByRegion}>
                           <MapPin className='h-4 w-4' />
@@ -2718,7 +2718,7 @@ function SubscriptionGeneratorPage() {
                   />
                 </div>
                 <div className='mt-4 flex justify-end gap-2'>
-                  {!isV3Mode && (
+                  {(!isV3Mode || ruleMode === 'custom') && (
                     <>
                       <Button variant='outline' onClick={handleAutoGroupByRegion}>
                         <MapPin className='mr-2 h-4 w-4' />
